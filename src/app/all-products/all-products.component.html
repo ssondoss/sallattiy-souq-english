@@ -1,11 +1,11 @@
 <div class="bg-fa px-0">
   <div class="container-small px-0">
     <div class="pt-5 py-3 text-left">
-      <b class="h4">جميع الفئات </b>
-      <small>( {{ products.length }} سلعة ) </small>
+      <b class="h4"> All Categories </b>
+      <small>( {{ products.length }} product ) </small>
     </div>
 
-    <div class="row mx-0 border px-0" dir="rtl">
+    <div class="row mx-0 border px-0" dir="ltr">
       <div
         class="
           d-flex
@@ -13,7 +13,7 @@
           h-auto
           col-xl-3 col-lg-4 col-md-6
           bg-white
-          border-left
+          border-right
           px-0
           text-left
           border-bottom
@@ -73,7 +73,7 @@
             style="box-shadow: inset 0 0 12px #e2e1e1"
           >
             <div
-              class="col-2 border-left h-100 d-flex"
+              class="col-2 border-right h-100 d-flex"
               (click)="editQuantity(product, 1)"
             >
               <i class="fa fa-plus m-auto" aria-hidden="true"></i>
@@ -93,7 +93,7 @@
               in cart
             </div>
             <div
-              class="col-2 h-100 d-flex border-right"
+              class="col-2 h-100 d-flex border-left"
               (click)="editQuantity(product, -1)"
             >
               <i class="fa fa-minus m-auto" aria-hidden="true"></i>

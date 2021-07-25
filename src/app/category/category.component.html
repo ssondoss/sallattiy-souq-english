@@ -8,7 +8,7 @@
     <div
       class="
         col-lg-3 col-md-4
-        border-left
+        border-right
         px-0
         text-right
         border-media-top
@@ -70,7 +70,7 @@
           style="box-shadow: inset 0 0 12px #e2e1e1"
         >
           <div
-            class="col-2 border-left h-100 d-flex"
+            class="col-2 border-right h-100 d-flex"
             (click)="editQuantity(product, 1)"
           >
             <i class="fa fa-plus m-auto" aria-hidden="true"></i>
@@ -89,7 +89,7 @@
             <small class="mx-1"> ({{ getQuantity(product) }})</small> in cart
           </div>
           <div
-            class="col-2 h-100 d-flex border-right"
+            class="col-2 h-100 d-flex border-left"
             (click)="editQuantity(product, -1)"
           >
             <i class="fa fa-minus m-auto" aria-hidden="true"></i>
@@ -98,7 +98,7 @@
       </div>
     </div>
   </div>
-  <div *ngIf="products.length == 0" class="alert alert-warning text-right mt-3">
+  <div *ngIf="products.length == 0" class="alert alert-warning text-left mt-3">
     there is no products in this category for now ... you can browse the
     finished products until you get this category done
   </div>

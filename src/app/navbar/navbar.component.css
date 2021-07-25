@@ -51,3 +51,10 @@
 .search::placeholder {
   text-align: left !important;
 }
+.lang {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+.lang:hover {
+  text-decoration: underline !important;
+}
