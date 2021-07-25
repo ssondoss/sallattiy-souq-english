@@ -1,0 +1,643 @@
+<span class="d-xl-block d-lg-block d-none"
+  ><div
+    class="row mx-0 text-white container-small py-2"
+    style="background-color: #232f3e"
+  >
+    <div class="col-6 text-left my-auto">
+      <div class="row mx-0">
+        <div class="w-auto">
+          <a routerLink="/contact-us" class="text-white contact">
+            contact us
+          </a>
+        </div>
+        <div class="w-auto text-right my-auto">
+          <a
+            href="https://web.facebook.com/sallatiy?_rdc=1&_rdr"
+            target="_blank"
+          >
+            <i
+              class="fa fa-facebook-square f-18 socail text-white"
+              aria-hidden="true"
+            ></i
+          ></a>
+        </div>
+        <div class="w-auto text-right my-auto px-1">
+          <a
+            href="https://www.instagram.com/sallatiy/?fbclid=IwAR1y4i4OYuSYLOyQDSlmf10yYqOuPndRZ4rqhGu395bN_uk7Kg4iWPoBKQs"
+            target="_blank"
+          >
+            <i
+              class="fa fa-instagram f-18 socail text-white"
+              aria-hidden="true"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 my-auto text-right row mx-0 ml-auto" dir="ltr">
+      <div class="w-auto text-right ml-auto">
+        <small dir="ltr">+962 79 700 4448 </small>
+      </div>
+      <div class="w-auto text-right" style="border-left: 0.5px solid #e4e2e2">
+        sallatiy.jo@gmail.com
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-0 py-2 container-small" style="position: relative">
+    <!-- <div
+      *ngIf="show"
+      (clickOutside)="closeShoppingCart()"
+      class="bg-white border rounded px-0"
+      (mouseleave)="closeShoppingCart()"
+      style="
+        width: 305px;
+        position: absolute;
+        z-index: 999;
+        top: 76%;
+        left: 8.2%;
+        height: 315px;
+      "
+    >
+      <div
+        class="w-100 p-2"
+        style="height: 200px; overflow-y: hidden; overflow-y: auto"
+      >
+        <div class="py-1" style="max-height: 600px">
+          <div class="row mx-0 px-0 mb-3">
+            <div class="col-3 p-2 border">
+              <img
+                src="../../assets/banner-1-ar.jpg"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <div class="col-9 small">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit
+              <div class=""><small>الكمية : 2</small></div>
+            </div>
+          </div>
+          <div class="row mx-0 px-0 mb-3">
+            <div class="col-3 p-2 border">
+              <img
+                src="../../assets/banner-1-ar.jpg"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <div class="col-9 small">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit
+              <div class=""><small>الكمية : 2</small></div>
+            </div>
+          </div>
+          <div class="row mx-0 px-0">
+            <div class="col-3 p-2 border">
+              <img
+                src="../../assets/banner-1-ar.jpg"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <div class="col-9 small">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit
+              <div class=""><small>الكمية : 2</small></div>
+            </div>
+          </div>
+          <div class="row mx-0 px-0">
+            <div class="col-3 p-2 border">
+              <img
+                src="../../assets/banner-1-ar.jpg"
+                height="100%"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <div class="col-9 small">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit
+              <div class=""><small>الكمية : 2</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-white w-100"
+        style="
+          position: sticky;
+          bottom: 0;
+          overflow-y: hidden;
+          left: 0;
+          z-index: 99999;
+        "
+      >
+        <div class="f-18 font-weight-bold pb-2 pt-3 text-center">
+          المجموع الإجمالي : 222 د.أ
+        </div>
+        <div class="row mx-0">
+          <div class="col-6 px-2">
+            <button class="btn btn-grey w-100 h-100">تفاصيل العربة</button>
+          </div>
+          <div class="col-6 px-2">
+            <button
+              class="btn btn-green w-100"
+              style="font-size: 18px !important"
+            >
+              شراء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="col-2 text-left px-0">
+      <img
+        src="../../assets/logo_sallaty.png"
+        routerLink="/"
+        alt=""
+        height="70"
+      />
+    </div>
+    <div class="col-xl-7 col-lg-7 d-flex">
+      <div class="input-group my-auto">
+        <input
+          type="text"
+          #key
+          class="form-control form-control-lg search"
+          placeholder="What are you searching  for ?"
+          aria-label=""
+          aria-describedby="basic-addon1"
+        />
+        <div class="input-group-prepend">
+          <button
+            class="btn btn-lg btn-danger rounded-0 f-20 px-4"
+            (click)="search(key.value)"
+            type="button"
+          >
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 my-auto row mx-0 px-0">
+      <div class="col-5 mx-auto text-center">
+        <span class="font-weight-bold">العربية</span>
+        <i
+          class="fa fa-exchange mr-2"
+          aria-hidden="true"
+          style="font-size: 12px !important"
+        ></i>
+      </div>
+      <div
+        class="col-7 text-center h-100"
+        style="border-left: 1px solid #c0bdbd; position: relative"
+      >
+        <a class="cart-link rounded py-3 px-2" routerLink="/checkout">
+          <img src="../../assets/cart.svg" class="mr-auto" height="30" alt="" />
+          <small
+            style="position: absolute; top: 0; left: 38%"
+            class="color-green font-weight-bold araba"
+            >{{ getProductsCount() }}</small
+          >
+          <span class="mx-1 h6 text-dark"> cart</span></a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="container-small bg-grey py-2">
+    <div class="row mx-0 f-nav my-auto px-2">
+      <div class="mx-auto w-auto px-1">
+        <a routerLink="/all-products" class="text-decoration-0 text-dark">
+          all categories</a
+        >
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          class="text-decoration-0 text-dark"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 1 }"
+        >
+          offers
+        </a>
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          class="text-decoration-0 text-dark"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 13 }"
+        >
+          gifts
+        </a>
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          class="text-decoration-0 text-dark"
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 2 }"
+        >
+          clothes
+        </a>
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 3 }"
+          class="text-decoration-0 text-dark"
+        >
+          toys
+        </a>
+      </div>
+
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 15 }"
+          class="text-decoration-0 text-dark"
+        >
+          baby requirements
+        </a>
+      </div>
+
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 5 }"
+          class="text-decoration-0 text-dark"
+        >
+          cosmetics
+        </a>
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 6 }"
+          class="text-decoration-0 text-dark"
+        >
+          perfumes
+        </a>
+      </div>
+
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 7 }"
+          class="text-decoration-0 text-dark"
+        >
+          glasses</a
+        >
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 8 }"
+          class="text-decoration-0 text-dark"
+        >
+          accessories
+        </a>
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 9 }"
+          class="text-decoration-0 text-dark"
+        >
+          bags and wallets
+        </a>
+      </div>
+
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 11 }"
+          class="text-decoration-0 text-dark"
+        >
+          electric devices
+        </a>
+      </div>
+      <div class="mx-auto w-auto">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 10 }"
+          class="text-decoration-0 text-dark"
+        >
+          houseware
+        </a>
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 14 }"
+          class="text-decoration-0 text-dark"
+        >
+          watches
+        </a>
+      </div>
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 12 }"
+          class="text-decoration-0 text-dark"
+        >
+          electronics
+        </a>
+      </div>
+      <!--     <div class="mx-auto w-auto px-1">
+مستلزمات أطفال</div> -->
+
+      <div class="mx-auto w-auto px-1">
+        <a
+          [routerLink]="['/category']"
+          [queryParams]="{ id: 4 }"
+          class="text-decoration-0 text-dark"
+        >
+          sundries
+        </a>
+      </div>
+    </div>
+  </div>
+</span>
+
+<span class="d-lg-none d-block">
+  <nav class="navbar navbar-default px-1 shadow-light">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a
+          type="button"
+          class="navbar-toggle collapsed text-dark"
+          data-toggle="collapse"
+          data-target="#navbar"
+          aria-expanded="false"
+          aria-controls="navbar"
+        >
+          <i class="fa fa-bars f-18"></i>
+        </a>
+        <a class="navbar-brand" routerLink="/"
+          ><img
+            src="../../assets/logo_sallaty.png"
+            alt=""
+            height="50"
+            class="ml-2"
+        /></a>
+      </div>
+      <div class="row mx-0 px-0 col-4">
+        <div class="col-6 my-auto text-right pr-0">
+          <a href="https://sallatiy.com/">
+            <span class="font-weight-bold ml-auto">العربية</span></a
+          >
+        </div>
+        <div class="col-6 my-auto text-center">
+          <a class="" routerLink="/checkout">
+            <img
+              src="../../assets/cart.svg"
+              class="ml-auto"
+              height="30"
+              alt=""
+            />
+            <small class="color-green font-weight-bold numOfProducts">{{
+              getProductsCount()
+            }}</small>
+          </a>
+        </div>
+      </div>
+
+      <div id="navbar" class="navbar-collapse collapse px-0">
+        <ul class="nav navbar-nav text-left pr-0">
+          <li class="active">
+            <a
+              routerLink="/"
+              type="button"
+              data-toggle="collapse"
+              aria-expanded="false"
+              data-target=".navbar-collapse.show"
+            >
+              home</a
+            >
+          </li>
+          <li class="py-3">
+            <a
+              routerLink="/all-products"
+              data-toggle="collapse"
+              aria-expanded="false"
+              data-target=".navbar-collapse.show"
+            >
+              all categories</a
+            >
+          </li>
+          <li class="dropdown pt-1 pb-3">
+            <a
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >categories <span class="caret"></span
+            ></a>
+            <ul class="dropdown-menu text-right">
+              <li class="text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 1 }"
+                >
+                  offers
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 13 }"
+                >
+                  gifts
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 2 }"
+                >
+                  clothes
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 3 }"
+                >
+                  toys
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 15 }"
+                >
+                  baby requirements
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 5 }"
+                >
+                  cosmetics
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 6 }"
+                >
+                  perfumes
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 7 }"
+                >
+                  glasses
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 8 }"
+                >
+                  accessories
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 9 }"
+                >
+                  bags and wallets
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 11 }"
+                >
+                  electric devices
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 10 }"
+                >
+                  houseware
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 14 }"
+                >
+                  watches
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 12 }"
+                >
+                  electronics
+                </a>
+              </li>
+              <li class="border-top text-decoration-0 text-dark p-2">
+                <a
+                  [routerLink]="['/category']"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                  [queryParams]="{ id: 4 }"
+                >
+                  sundries
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav text-left pr-0 border-top">
+          <li class="pt-3 h-auto">
+            <div class="row mx-0 px-0 my-auto h-100 mb-0 pb-0">
+              <div class="col-md-2 col-3 text-left pl-0 my-auto mb-0 pb-0">
+                <a
+                  href="https://web.facebook.com/sallatiy?_rdc=1&_rdr"
+                  target="_blank"
+                >
+                  <i
+                    class="fa fa-facebook-square f-18 socail"
+                    aria-hidden="true"
+                  ></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/sallatiy/?fbclid=IwAR1y4i4OYuSYLOyQDSlmf10yYqOuPndRZ4rqhGu395bN_uk7Kg4iWPoBKQs"
+                  target="_blank"
+                >
+                  <i
+                    class="fa fa-instagram f-18 socail ml-3"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+              </div>
+              <div class="col-9 col-md-10 h-100 mb-0 pb-0 text-right">
+                <a
+                  routerLink="/contact-us"
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  data-target=".navbar-collapse.show"
+                >
+                  contact us</a
+                >
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</span>

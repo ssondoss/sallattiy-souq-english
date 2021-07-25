@@ -1,0 +1,106 @@
+<div class="bg-fa px-0">
+  <div class="container-small px-0">
+    <div class="pt-5 py-3 text-left">
+      <b class="h4">جميع الفئات </b>
+      <small>( {{ products.length }} سلعة ) </small>
+    </div>
+
+    <div class="row mx-0 border px-0" dir="rtl">
+      <div
+        class="
+          d-flex
+          flex-column
+          h-auto
+          col-xl-3 col-lg-4 col-md-6
+          bg-white
+          border-left
+          px-0
+          text-left
+          border-bottom
+        "
+        *ngFor="let product of products"
+      >
+        <div class="" style="position: relative">
+          <div class="overlay">
+            <img
+              [src]="getImage(product.images[0])"
+              width="100%"
+              height="auto"
+              class="product-img"
+              alt=""
+            />
+            <button
+              class="btn btn-danger btn-sm middle"
+              [routerLink]="['/product-details']"
+              [queryParams]="{ id: product.id }"
+            >
+              product details
+            </button>
+          </div>
+        </div>
+        <div class="p-md-3 p-2 text-left pb-0">
+          <div class="h5 break">{{ product.titleEnglish }}</div>
+
+          <div class="text-muted break">
+            {{ product.descEnglish }}
+          </div>
+        </div>
+        <div class="font-weight-bold text-danger px-md-3 px-2">
+          {{ product.price }}
+          JD
+        </div>
+        <div class="text-muted px-md-3 px-2 pt-2">
+          {{ product.count }} peices available
+        </div>
+        <div class="p-md-3 p-2 mt-auto">
+          <button
+            class="btn btn-green w-100"
+            *ngIf="!inCart(product)"
+            (click)="addToCart(product, 1)"
+          >
+            add to cart
+            <img
+              src="../../assets/add-to-cart.svg"
+              height="25"
+              class="mx-2 my-auto"
+              width="auto"
+              alt=""
+            />
+          </button>
+          <div
+            class="border row mx-0 h-55 mt-2 rounded"
+            *ngIf="inCart(product)"
+            style="box-shadow: inset 0 0 12px #e2e1e1"
+          >
+            <div
+              class="col-2 border-left h-100 d-flex"
+              (click)="editQuantity(product, 1)"
+            >
+              <i class="fa fa-plus m-auto" aria-hidden="true"></i>
+            </div>
+            <div
+              class="
+                col-8
+                m-auto
+                text-center
+                color-green
+                font-weight-bold
+                f-20
+                px-0
+              "
+            >
+              <small class="mx-1"> ({{ getQuantity(product) }})</small>
+              in cart
+            </div>
+            <div
+              class="col-2 h-100 d-flex border-right"
+              (click)="editQuantity(product, -1)"
+            >
+              <i class="fa fa-minus m-auto" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
