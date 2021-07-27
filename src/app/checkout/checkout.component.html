@@ -99,9 +99,10 @@
           <div class="row mx-0 h5" *ngIf="city!=''">
             <div class="w-auto my-auto px-0 h6">Delivery :</div>
             <div class="w-auto my-auto text-danger">
-              <span class="font-weight-bold" *ngIf="city=='amman'">3</span>
-              <span class="font-weight-bold" *ngIf="city!='amman'">5</span>
-              <span class="mx-2"> JD</span>
+              <span class="font-weight-bold" *ngIf="city=='amman'"  style="text-decoration: line-through 2px">3</span>
+              <span class="font-weight-bold" *ngIf="city!='amman'"  style="text-decoration: line-through 2px">5</span>
+              <span class="mx-2"  style="text-decoration: line-through 2px"> JD</span>
+              <span class="mx-2">Free delivery till (30/09/2021).</span>
             </div>
           </div>
         </div>
