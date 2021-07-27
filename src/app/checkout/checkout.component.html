@@ -96,6 +96,14 @@
               <span class="mx-2"> JD</span>
             </div>
           </div>
+          <div class="row mx-0 h5" *ngIf="city!=''">
+            <div class="w-auto my-auto px-0 h6">Delivery :</div>
+            <div class="w-auto my-auto text-danger">
+              <span class="font-weight-bold" *ngIf="city=='amman'">3</span>
+              <span class="font-weight-bold" *ngIf="city!='amman'">5</span>
+              <span class="mx-2"> JD</span>
+            </div>
+          </div>
         </div>
         <div class="bg-white shadow-light p-md-4 p-3 rounded">
           <div class="h5 text-center py-2">Delivering Details</div>
@@ -162,7 +170,7 @@
 
               <div class="form-group col-6 pl-0">
                 <label>City</label>
-                <select class="form-control" formControlName="city" required>
+                <select class="form-control" formControlName="city" required (change)="cityChanged($event)">
                   <option value="amman">amman</option>
                   <option value="balqaa">balqa</option>
                   <option value="irbid">irbid</option>

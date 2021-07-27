@@ -13,6 +13,7 @@ import swal from 'sweetalert2';
 export class CheckoutComponent implements OnInit {
   products: any;
   orderForm!: FormGroup;
+  city:string='';
 
   constructor(private formBuilder: FormBuilder, private http: HttpClient) {
     this.products = JSON.parse(localStorage.getItem('shopping-cart') || '[]');
@@ -70,6 +71,13 @@ export class CheckoutComponent implements OnInit {
 
   placeOrder() {
     if (this.orderForm.valid && this.products.length > 0)
+    let total:number ;
+    total= this.getTotal();
+    if(this.city=='amman'){
+      total+=3;
+    }else{
+      total+=5;
+    }
       this.http
         .post(environment.apiURL + 'order', {
           name: this.orderForm.controls['name'].value,
@@ -82,7 +90,7 @@ export class CheckoutComponent implements OnInit {
           country: 'Jordan',
           total: this.getTotal(),
         })
-        .subscribe((res) => {
+        .subscribe((res:any) => {
           localStorage.clear();
           swal.fire({
             position: 'center',
@@ -106,5 +114,9 @@ export class CheckoutComponent implements OnInit {
 
   getImage(image: any) {
     return environment.imageURL + image;
+  }
+
+  cityChanged(event:any){
+      this.city = event.target.value;
   }
 }
